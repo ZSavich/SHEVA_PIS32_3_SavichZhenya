@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Matthew Schwartz Blog</title>
+    <link rel="preload" href="fonts/geomanist-regular.woff2" as="font">
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -11,7 +13,7 @@
 			<header class="leftBlock__author author">
 				<picture>
 					<source media="(min-width: 1024px)" srcset="./photo/author@2x.jpg 1x, ./photo/author@3x.jpg 2x">
-					<img class="author__photo src="./photo/author.jpg" srcset="./photo/author@2x.jpg 2x" alt="Matthew Schwartz">
+					<img class="author__photo" src="./photo/author.jpg" srcset="./photo/author@2x.jpg 2x" alt="Matthew Schwartz">
 				</picture>
 				<h1>Matthew Schwartz <span>Blog</span></h1>
 			</header>
@@ -21,13 +23,13 @@
 				</a>
 				<ul class="leftBlock__socials socials">
 					<li class="socials__item">
-						<a href="#" class="socials__link social__link--fb">In facebook</a>
+						<a href="#" class="socials__link social__link--fb social__link--hidden">In facebook</a>
 					</li>
 					<li class="socials__item">
-						<a href="#" class="socials__link social__link--inst">In Instagram</a>
+						<a href="#" class="socials__link social__link--inst social__link--hidden">In Instagram</a>
 					</li>
 					<li class="socials__item">
-						<a href="#" class="socials__link social__link--in">In Linked</a>
+						<a href="#" class="socials__link social__link--in social__link--hidden">In Linked</a>
 					</li>
 				</ul>
 			</footer>
@@ -80,7 +82,7 @@
 					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, <strong>eaque ipsa quae ab illo inventore</strong> veritatis et quasi <a href="#">architecto beatae</a> vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 				</p>
 			</article>
-			<article class="rightBlock__block block experience">
+			<article class="rightBlock__block block history">
 				<header class="block__header">
 					<h3 class="block__title">
 						Duis aute irure dolor in reprehenderit
@@ -106,19 +108,19 @@
 					</picture>
 				</div>
 				<article class="rightBlock__block aboutMe">
-					<a href="#" class="aboutMe__icon icon icon--share">ShareMe</a>
+					<a href="#" class="aboutMe__icon icon icon--share icon--hidden">ShareMe</a>
 					<div class="aboutMe__photo">
 						<picture>
 							<source media="(min-width: 1024px)" srcset="./photo/author@2x.jpg 1x, ./photo/author@3x.jpg 2x">
-							<img class="author__photo src="./photo/author.jpg" srcset="./photo/author@2x.jpg 2x" alt="Matthew Schwartz">
+							<img class="author__photo" src="./photo/author.jpg" srcset="./photo/author@2x.jpg 2x" alt="Matthew Schwartz">
 						</picture>
 					</div>
 					<h1 class="aboutMe__name">Matthew Schwartz</h1>
 					<p class="aboutMe__info">
 						Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
 					</p>
-					<form action="#">
-						<input type="email" class="inputText__icon inputText__icon--email" name="email" id="email" placeholder="Subscribe me now!">
+					<form action="#" class="form">
+						<input type="email" class="form__text form__text--icon form__text--icon-email" name="email" id="email" placeholder="Subscribe me now!">
 						<input type="submit" class="btn btn--subs" value="Subscribe">
 					</form>
 				</article>
