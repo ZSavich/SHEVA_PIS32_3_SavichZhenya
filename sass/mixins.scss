@@ -1,0 +1,6 @@
+@mixin geomanist($size: 16px, $weight: normal, $height: 28px) {
+  font-family: "Geomanist", Arial, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}

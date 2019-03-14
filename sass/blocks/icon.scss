@@ -1,0 +1,22 @@
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 100%;
+
+  text-indent: -99999px;
+
+  transition: all 0.5s ease-in;
+  animation: levitation 6s ease-in-out infinite;
+
+  &--share {
+    background-color: #5a5aff;
+    background-image: url("../icons/share.svg");
+  }
+
+  &--share:hover,
+  &--share:focus{
+    outline: none;
+    background-color: #6262BF;
+  }
+}

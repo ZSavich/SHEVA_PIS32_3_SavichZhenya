@@ -9,6 +9,7 @@ const csso = require("gulp-csso");
 const del = require("del");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const svgmin = require("gulp-svgmin");
 
 sass.compiler = require('node-sass');
 
@@ -17,11 +18,12 @@ gulp.task("style", ()=>{
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(gulp.dest("./build/style"))
+        .pipe(gulp.dest("./style/"))
+        .pipe(gulp.dest("./build/style/"))
         .pipe(csso())
         .pipe(rename("style.min.css"))
         .pipe(gulp.dest("./build/style"))
-        .pipe(server.stream())
+        .on('end', server.reload)
 });
 
 gulp.task("del", ()=>{
@@ -44,18 +46,26 @@ gulp.task("imagemin", ()=>{
        .pipe(gulp.dest("./build/photo"))
 });
 
-gulp.task("serve", gulp.series('del', gulp.parallel("style","copyhtml","copyfonts","imagemin"), ()=>{
+gulp.task("svgmin", ()=>{
+    return gulp.src("./icons/*.svg")
+        .pipe(svgmin())
+        .pipe(gulp.dest("./build/icons"));
+})
+
+
+gulp.task("serve", gulp.series(gulp.parallel("style"), ()=>{
     server.init({
-        server: "./build",
-        notify: false,
-        open: true,
-        cors: true,
-        ui: false
+        server: {
+            baseDir: "."
+        },
+        notify: false
     });
 
     gulp.watch("sass/**/*.scss", gulp.series("style"));
     gulp.watch("*.html", gulp.series("copyhtml"));
     gulp.watch("*.html").on("change", server.reload);
 }));
+
+gulp.task('build', gulp.series('del', gulp.parallel("style", "copyhtml", "copyfonts", "imagemin", "svgmin")));
 
 

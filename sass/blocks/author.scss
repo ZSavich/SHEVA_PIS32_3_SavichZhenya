@@ -1,0 +1,48 @@
+.author {
+  display: flex;
+
+  margin-left: 20px;
+
+  &__photo {
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 100%;
+
+    background-image: url("../photo/author.jpg");
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../photo/author@2x.jpg");
+    }
+
+    @media (min-width: $minWidth) {
+      background-image: url("../photo/author@2x.jpg");
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../photo/author@3x.jpg");
+      }
+
+    }
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-color: black;
+
+    margin-right: 25px;
+  }
+
+  h1 {
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+
+    span {
+      display: block;
+    }
+  }
+}
+

@@ -1,0 +1,74 @@
+.aboutMe {
+  display: flex;
+  position: relative;
+
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(to bottom, rgba(12, 12, 24, 0), rgba(155, 155, 231, 0) 70%, rgba(5, 5, 10, 0.12));
+
+  margin-top: 75px;
+  margin-left: -80px;
+  margin-right: -80px;
+
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 65px;
+  padding-bottom: 70px;
+
+  box-sizing: border-box;
+
+  &__icon {
+    display: block;
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    right: 65px;
+    top: -20px;
+  }
+
+  &__photo {
+    flex-shrink: 0;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 100%;
+
+    background-image: url("../photo/author.jpg");
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../photo/author@2x.jpg");
+    }
+
+    @media (min-width: $minWidth) {
+      background-image: url("../photo/author@2x.jpg");
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../photo/author@3x.jpg");
+      }
+
+    }
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 115px;
+    background-color: black;
+
+    margin-right: 35px;
+  }
+
+  &__name {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+}

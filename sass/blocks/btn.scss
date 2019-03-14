@@ -1,0 +1,30 @@
+.btn {
+  font-family: "Helvetica", Arial, sans-serif;
+  color: white;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: #29b1cc;
+
+  padding-top: 11px;
+  padding-right: 15px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    background-color: #5CD0E6;
+  }
+
+  &--submit {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+  }
+}

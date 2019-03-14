@@ -1,0 +1,82 @@
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+  height: 100vh;
+  box-sizing: border-box;
+
+  background-image: linear-gradient(to bottom,
+                      rgba(12, 12, 24, 0),
+                      rgba(5, 5, 11, 0) 58%,
+                      rgba(5, 5, 10, 0.49)),
+                    url("../photo/wallpaper.png");
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: linear-gradient(to bottom,
+            rgba(12, 12, 24, 0),
+            rgba(5, 5, 11, 0) 58%,
+            rgba(5, 5, 10, 0.49)),
+    url("../photo/wallpaper@2x.png");
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  color: gray;
+
+  padding: 40px;
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin: 0px 40px;
+  }
+
+  &__back {
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 11px;
+      height: 9px;
+
+      background-image: url("../icons/arrow-left.svg");
+
+      margin-bottom: 2px;
+      margin-right: 4px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+
+@media (min-width: $minWidth) {
+  .leftBlock {
+    background-image: linear-gradient(to bottom,
+            rgba(12, 12, 24, 0),
+            rgba(5, 5, 11, 0) 58%,
+            rgba(5, 5, 10, 0.49)),
+    url("../photo/wallpaper@2x.png");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: linear-gradient(to bottom,
+              rgba(12, 12, 24, 0),
+              rgba(5, 5, 11, 0) 58%,
+              rgba(5, 5, 10, 0.49)),
+      url("../photo/wallpaper@3x.png");
+    }
+  }
+}

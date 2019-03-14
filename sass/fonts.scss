@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Geomanist";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/geomanist-regular.woff") format("woff"),
+       url("../fonts/geomanist-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/HelveticaBold.woff") format("woff"),
+       url("../fonts/HelveticaBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/HelveticaRegular.woff") format("woff"),
+       url("../fonts/HelveticaRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/HelveticaMedium.woff") format("woff"),
+       url("../fonts/HelveticaMedium.woff2") format("woff2");
+}

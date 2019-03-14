@@ -1,0 +1,59 @@
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  height: 100vh;
+
+  &__scroll {
+    position: absolute;
+
+    bottom: 90px;
+    left: 50%;
+
+    transform: rotate(-45deg) translateX(-100%);
+
+    width: 30px;
+    height: 30px;
+  }
+
+  &__scroll::before {
+    content: '';
+
+    position: absolute;
+
+    bottom: 5px;
+    left: 5px;
+
+    width: 30px;
+    height: 30px;
+
+    border: solid 4px #5a5aff;
+    border-right: none;
+    border-top: none;
+
+    animation: scroll 1s linear infinite;
+  }
+
+  &__scroll::after {
+    content: '';
+
+    position: absolute;
+
+    opacity: 0;
+
+    bottom: 0px;
+    left: 0px;
+
+    width: 30px;
+    height: 30px;
+
+    border: solid 4px #5a5aff;
+    border-right: none;
+    border-top: none;
+
+    animation: scroll 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+}

@@ -1,0 +1,37 @@
+.socials {
+
+  list-style: none;
+
+  &__link {
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin-top: 30px;
+
+    &--fb {
+      background-image: url("../icons/icon-facebook.svg");
+    }
+
+    &--inst {
+      background-image: url("../icons/icon-instagram.svg");
+    }
+
+    &--in {
+      background-image: url("../icons/icon-linkedIn.svg");
+    }
+
+    &--hidden {
+      text-indent: -99999px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

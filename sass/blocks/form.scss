@@ -1,0 +1,44 @@
+.form {
+  position: relative;
+
+  &__text {
+    font-family: "Helvetica", Arial, sans-serif;
+
+    border-radius: 20px;
+    border: solid 1px #dfe2e6;
+
+    background-color: white;
+
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05);
+
+    padding-top: 10px;
+    padding-right: 115px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+
+    box-sizing: border-box;
+
+    transition: all 0.5s;
+
+    &--icon {
+      background-image: url("../icons/mail.svg");
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      background-size: 20px;
+    }
+
+    &--icon-email {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: #bababa;
+      font-weight: normal;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #8383FF;
+    }
+  }
+}
